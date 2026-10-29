@@ -1,0 +1,30 @@
+/* Complexo V5 — artes diferentes por página, sem usar um mesmo banner em todo o site */
+.page-hero-streamers .page-hero-photo{background-image:url('/assets/streamers-city.webp');background-position:center 47%}
+.page-hero-equipe .page-hero-photo{background-image:url('/assets/team-city.webp');background-position:center 46%}
+.page-hero-instalacao .page-hero-photo{background-image:url('/assets/install-city.webp');background-position:center 55%}
+.page-hero-regras .page-hero-photo{background-image:url('/assets/rules-city.webp');background-position:center 42%}
+.page-hero-photo{opacity:.9;animation:openingZoom 18s ease-out both}
+.page-hero-sheen{background:linear-gradient(90deg,rgba(7,6,10,.96) 0%,rgba(9,7,12,.78) 30%,rgba(11,8,16,.21) 80%),linear-gradient(0deg,#09080b,transparent 75%)}
+.page-hero-inner{padding:15px 0 5px}
+.cpx-hero-photo img{object-position:center center}
+.install-art-photo{background:#09080b}
+.install-art-photo img{width:100%;height:100%;max-height:none;object-fit:cover;filter:brightness(.78);animation:openingZoom 18s ease-out both}
+.install-art-photo::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,#06050980,transparent 65%);pointer-events:none}
+.install-art-photo span{z-index:2;color:white;text-shadow:0 2px 9px #000}
+.cta-banner{background:radial-gradient(circle at 80% 20%,rgba(246,17,102,.28),transparent 35%),linear-gradient(115deg,#0b0810,#201027 60%,#0b0810)!important}
+@media(max-width:780px){.page-hero-streamers .page-hero-photo{background-position:60% center}.page-hero-equipe .page-hero-photo{background-position:56% center}.page-hero-instalacao .page-hero-photo{background-position:57% center}.page-hero-regras .page-hero-photo{background-position:65% center}}
+@media(max-width:520px){.cpx-hero-photo img{object-position:56% center}.page-hero-sheen{background:linear-gradient(0deg,#08070b 0%,#08070bdc 28%,#08070b60 100%)}}
+/* Cada seção tem uma composição diferente, além de uma imagem exclusiva. */
+.page-hero-streamers{min-height:510px;padding-top:155px;padding-bottom:110px}
+.page-hero-streamers .page-hero-inner{border-left:4px solid #ff186d;padding-left:32px}
+.page-hero-streamers .page-hero-sheen{background:linear-gradient(90deg,#08070bf4 0%,#08070ba9 33%,#08070b18 75%),linear-gradient(0deg,#08070bd0,transparent 90%)}
+.page-hero-equipe{min-height:540px;display:flex;align-items:center}
+.page-hero-equipe .page-hero-inner{display:flex;flex-direction:column;align-items:flex-end;text-align:right}
+.page-hero-equipe .page-hero-sheen{background:linear-gradient(270deg,#08070bf5 0%,#08070bc7 28%,#08070b30 85%),linear-gradient(0deg,#08070bad,transparent 80%)}
+.page-hero-equipe .page-hero p{margin-left:auto}
+.page-hero-instalacao{min-height:500px}
+.page-hero-instalacao .page-hero-inner{max-width:1280px}
+.page-hero-instalacao .page-stamp{background:#ff086c;color:#fff;width:max-content;padding:8px 12px;transform:skew(-6deg)}
+.page-hero-regras{min-height:440px}
+.page-hero-regras .page-hero-inner{border-top:1px solid #ff307658;padding-top:22px}
+@media(max-width:780px){.page-hero-equipe .page-hero-inner{align-items:flex-start;text-align:left}.page-hero-streamers .page-hero-inner{padding-left:18px}.page-hero-equipe,.page-hero-instalacao,.page-hero-streamers{min-height:440px}}
