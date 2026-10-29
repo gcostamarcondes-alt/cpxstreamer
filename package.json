@@ -1,0 +1,13 @@
+{
+  "name": "complexo-rp-site",
+  "version": "5.0.0",
+  "private": true,
+  "description": "Portal Complexo RP com artes variadas, lives por plataforma sem Discord ou MTA, equipe e painel administrativo",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
