@@ -173,7 +173,7 @@ const server=http.createServer(async(req,res)=>{
  if(req.method!=='GET')return error(res,405,'Método não permitido.');
  const target=routes[p]||p.replace(/^\//,'');const resolved=path.resolve(PUB,target);if(!resolved.startsWith(PUB+path.sep))return error(res,403,'Acesso negado.');fs.readFile(resolved,(err,data)=>{if(err)return error(res,404,'Página não encontrada.');res.writeHead(200,{'Content-Type':types[path.extname(resolved)]||'application/octet-stream','Cache-Control':'public, max-age=120'});res.end(data);});
 });
-if(require.main===module){server.listen(PORT,HOST,()=>{
+if(require.main===module){server.listen(PORT, "0.0.0.0");
  console.log('\nCOMPLEXO RP — PORTAL NO AR');console.log('Site:  http://'+HOST+':'+PORT);console.log('Painel: http://'+HOST+':'+PORT+'/admin');
  console.log('Lives: APIs de Twitch/Kick/YouTube ou seleção manual no painel. Sem bot Discord/MTA.\n');
  synchronize();setInterval(synchronize,60000).unref();setInterval(trackRanking,60000).unref();
